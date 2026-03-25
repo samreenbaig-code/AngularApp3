@@ -1,0 +1,40 @@
+<div class="container">
+
+<h1>Book Browser App</h1>
+
+<h2>Book List</h2>
+
+<button routerLink="/add" class="add-btn">Add Book</button>
+
+<table>
+
+<thead>
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Description</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let book of books">
+
+<td>{{book.title}}</td>
+<td>{{book.author}}</td>
+<td>{{book.description}}</td>
+
+<td>
+<button class="delete-btn" (click)="deleteBook(book.id)">
+Delete
+</button>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
