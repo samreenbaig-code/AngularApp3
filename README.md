@@ -1,7 +1,44 @@
-# AngularApp3
+# Angular Book Browser App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+This project is a simple Angular + PHP + MySQL application to manage books.
 
+## Features
+- View book list
+- Add new books
+- Delete books
+- REST API with PHP
+- MySQL database
+
+## Technologies
+- Angular
+- TypeScript
+- PHP
+- MySQL
+- XAMPP
+
+## How to Run the Project
+
+1. Clone the repository
+
+git clone https://github.com/samreenbaig-code/AngularApp3
+
+2. Install dependencies
+
+npm install
+
+3. Start Angular server
+
+ng serve
+
+4. Run XAMPP (Apache + MySQL)
+
+5. Import the database file:
+
+book_db.sql
+
+6. Open the application
+
+http://localhost:4200
 ## Development server
 
 To start a local development server, run:
