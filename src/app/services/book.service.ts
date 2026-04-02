@@ -1,29 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Book } from '../models/book';
 
 @Injectable({
-  providedIn: 'root'
+providedIn:'root'
 })
-export class BookService {
 
-  api = "http://localhost/AngularApp3-main/api/";
+export class BookService{
 
-  constructor(private http: HttpClient) {}
+apiURL = "http://localhost/book-api";
 
-   // Get all books from the database
+constructor(private http:HttpClient){}
+
 getBooks(){
-  return this.http.get<any[]>("http://localhost/AngularApp3-main/api/getBooks.php");
+return this.http.get(this.apiURL+"/get_books.php");
 }
 
-  // Add a new book to the database
-  addBook(book:any){
-    return this.http.post(this.api + "add.php", book);
-  }
-
-  // Delete a book from the database
-  deleteBook(id:number){
-  return this.http.get(this.api + "deleteBook.php?id=" + id);
+addBook(data:any){
+return this.http.post(this.apiURL+"/add_book.php",data);
 }
+
+deleteBook(id:number){
+return this.http.get(this.apiURL+"/delete.php?id="+id);
+}
+
+updateBook(data:any){
+return this.http.post(this.apiURL+"/update_book.php",data);
+}
+
 }

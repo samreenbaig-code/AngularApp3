@@ -1,34 +1,51 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { BookService } from '../../services/book.service';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-list',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './list.component.html'
+selector: 'app-list',
+standalone: true,
+imports: [CommonModule, RouterModule],
+templateUrl: './list.component.html'
 })
+
 export class ListComponent implements OnInit {
 
-  books: any[] = [];
+books:any[] = [];
 
-  constructor(private bookService: BookService) {}
+constructor(private bookService:BookService){}
 
-  ngOnInit(){
-    this.loadBooks();
-  }
+ngOnInit(){
 
-  loadBooks(){
-    this.bookService.getBooks().subscribe((data:any[])=>{
-      console.log("DATA:", data);
-      this.books = data;
-    });
-  }
+this.loadBooks();
 
-  deleteBook(id:number){
-    this.bookService.deleteBook(id).subscribe(()=>{
-      this.loadBooks();
-    });
-  }
+}
+
+loadBooks(){
+
+this.bookService.getBooks().subscribe((data:any)=>{
+
+console.log("DATA:",data);
+
+this.books = data;
+
+});
+
+}
+
+delete(id:number){
+
+if(confirm("Delete this book?")){
+
+this.bookService.deleteBook(id).subscribe(()=>{
+
+this.loadBooks();
+
+});
+
+}
+
+}
 
 }

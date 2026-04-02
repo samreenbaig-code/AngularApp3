@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-5">
 
 <h2>Add Book</h2>
 
@@ -19,9 +19,14 @@
 <textarea class="form-control" [(ngModel)]="book.description" name="description"></textarea>
 </div>
 
-<button type="submit" class="btn btn-success">Add Book</button>
+<div class="mb-3">
+<label class="form-label">Upload Image</label>
+<input type="file" class="form-control" (change)="selectFile($event)">
+</div>
 
-<a routerLink="/list" class="btn btn-secondary ms-2">Back to List</a>
+<button class="btn btn-success">
+Save Book
+</button>
 
 </form>
 
