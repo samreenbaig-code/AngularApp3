@@ -1,62 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
-/* Page layout */
 body{
-  font-family: Arial, Helvetica, sans-serif;
-  background:#f4f6f9;
-  margin:0;
+font-family: 'Segoe UI', Arial;
+background:#f4f6f9;
+margin:0;
+padding:0;
 }
 
-/* Main container */
-.container{
-  width:85%;
-  margin:auto;
-  padding:20px;
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#1f2937;
+padding:15px 40px;
+color:white;
 }
 
-/* Title */
-h1{
-  color:#333;
+.navbar nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:500;
 }
 
-/* Buttons */
-button{
-  padding:8px 16px;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
+.navbar nav a:hover{
+color:#60a5fa;
 }
+
+/* PAGE TITLE */
+
+.page-title{
+font-size:28px;
+margin-bottom:20px;
+}
+
+/* ADD BUTTON */
 
 .add-btn{
-  background:#2563eb;
-  color:white;
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.add-btn:hover{
+background:#1d4ed8;
+}
+
+/* TABLE */
+
+.book-table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.book-table th{
+background:#1f2937;
+color:white;
+padding:12px;
+text-align:left;
+}
+
+.book-table td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.book-table tr:hover{
+background:#f9fafb;
+}
+
+/* ACTION BUTTONS */
+
+.edit-btn{
+background:#e5e7eb;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+margin-right:6px;
+cursor:pointer;
 }
 
 .delete-btn{
-  background:#e11d48;
-  color:white;
+background:#ef4444;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
 }
 
-/* Table */
-table{
-  width:100%;
-  border-collapse:collapse;
-  background:white;
-  margin-top:20px;
+.delete-btn:hover{
+background:#dc2626;
+}
+.pagination{
+margin-top:20px;
 }
 
-th{
-  background:#1f2937;
-  color:white;
-  padding:12px;
-  text-align:left;
-}
-
-td{
-  padding:12px;
-  border-bottom:1px solid #ddd;
-}
-
-/* Row hover effect */
-tr:hover{
-  background:#f1f5f9;
+.pagination button{
+padding:8px 12px;
+margin:5px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:5px;
+cursor:pointer;
 }

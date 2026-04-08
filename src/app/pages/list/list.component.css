@@ -1,84 +1,56 @@
-/* Page Title */
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
+body{
+font-family: Arial;
+margin: 20px;
 }
 
-/* Add Book Button */
-a button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
+.book-table{
+width:100%;
+border-collapse:collapse;
 }
 
-a button:hover {
-    background-color: #45a049;
+.book-table th,
+.book-table td{
+border:1px solid #ccc;
+padding:10px;
+text-align:left;
 }
 
-/* Table Styling */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    background: #fff;
+.book-table th{
+background:#f5f5f5;
 }
 
-/* Table Header */
-thead {
-    background-color: #333;
-    color: white;
+.add-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:10px 15px;
+cursor:pointer;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
+.edit-btn{
+background:#007bff;
+color:white;
+border:none;
+padding:6px 10px;
+margin-right:5px;
+cursor:pointer;
 }
 
-/* Table Borders */
-table, th, td {
-    border: 1px solid #ddd;
+.delete-btn{
+background:#dc3545;
+color:white;
+border:none;
+padding:6px 10px;
+cursor:pointer;
 }
 
-/* Row Hover Effect */
-tbody tr:hover {
-    background-color: #f5f5f5;
+button:hover{
+opacity:0.85;
 }
-
-/* Image Styling */
-td img {
-    border-radius: 5px;
-}
-
-/* Action Buttons */
-td button {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-/* Edit Button */
-td a button {
-    background-color: #2196F3;
-    color: white;
-}
-
-td a button:hover {
-    background-color: #0b7dda;
-}
-
-/* Delete Button */
-td button {
-    background-color: #f44336;
-    color: white;
-}
-
-td button:hover {
-    background-color: #da190b;
+.search-box{
+padding:10px;
+width:250px;
+margin:15px 0;
+border:1px solid #ccc;
+border-radius:6px;
 }

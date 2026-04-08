@@ -1,35 +1,35 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BookService } from '../../services/book.service';
+import { Router } from '@angular/router';
 
 @Component({
-selector:'app-add',
-standalone:true,
-imports:[FormsModule],
-templateUrl:'./add.component.html'
+  selector: 'app-add',
+  standalone: true,
+  imports: [FormsModule],
+  templateUrl: './add.component.html'
 })
+export class AddBookComponent {
 
-export class AddBookComponent{
+title="";
+author="";
+description="";
 
-book:any = {};
-file:any;
+constructor(private bookService:BookService, private router:Router){}
 
-constructor(private bookService:BookService){}
+saveBook(){
 
-selectFile(event:any){
-this.file = event.target.files[0];
-}
+this.bookService.addBook({
+title:this.title,
+author:this.author,
+description:this.description
+}).subscribe(()=>{
 
-addBook(){
+alert("Book Saved");
 
-const formData = new FormData();
+this.router.navigate(['/list']);
 
-formData.append("title",this.book.title);
-formData.append("author",this.book.author);
-formData.append("description",this.book.description);
-formData.append("image",this.file);
-
-this.bookService.addBook(formData).subscribe();
+});
 
 }
 

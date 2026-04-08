@@ -1,33 +1,9 @@
-<div class="container mt-5">
-
 <h2>Add Book</h2>
 
-<form (ngSubmit)="addBook()">
+<input type="text" placeholder="Title" [(ngModel)]="title"><br><br>
 
-<div class="mb-3">
-<label class="form-label">Title</label>
-<input type="text" class="form-control" [(ngModel)]="book.title" name="title">
-</div>
+<input type="text" placeholder="Author" [(ngModel)]="author"><br><br>
 
-<div class="mb-3">
-<label class="form-label">Author</label>
-<input type="text" class="form-control" [(ngModel)]="book.author" name="author">
-</div>
+<textarea placeholder="Description" [(ngModel)]="description"></textarea><br><br>
 
-<div class="mb-3">
-<label class="form-label">Description</label>
-<textarea class="form-control" [(ngModel)]="book.description" name="description"></textarea>
-</div>
-
-<div class="mb-3">
-<label class="form-label">Upload Image</label>
-<input type="file" class="form-control" (change)="selectFile($event)">
-</div>
-
-<button class="btn btn-success">
-Save Book
-</button>
-
-</form>
-
-</div>
+<button (click)="saveBook()">Save Book</button>
