@@ -94,3 +94,25 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Angular Book Manager
+
+Full stack book management application.
+
+Features
+- User Registration
+- Login
+- Add Book
+- Update Book
+- Delete Book
+- View Books
+- Angular frontend
+- PHP + MySQL backend
+
+Run Project
+
+1. Start XAMPP
+2. Import book_db.sql
+3. Run Angular
+
+npm install
+ng serve
